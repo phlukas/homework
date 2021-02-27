@@ -16,7 +16,7 @@ function SearchBox()
       .then((data) =>
       {
         let newMovies = [];
-        data.results.slice(0, 8).map((x, i) => newMovies[i] = x.original_title);
+        data.results.slice(0, 8).map((x, i) => newMovies[i] = x.title);
         setMovies(newMovies);
       });
     }else
@@ -32,7 +32,7 @@ function SearchBox()
         <input type="submit"/>
         <div className = "autocomplete-table">
           {
-            movies.map((x, i) => {return <div className="option">{x+i}</div>})
+            movies.map((x, i) => {return <div className="option" key={i}>{x}</div>})
           }
         </div>
       </form>
