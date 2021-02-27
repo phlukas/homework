@@ -16,7 +16,7 @@ function SearchBox()
       .then((data) =>
       {
         let newMovies = [];
-        data.results.map((x, i) => newMovies[i] = x.original_title);
+        data.results.slice(0, 8).map((x, i) => newMovies[i] = x.original_title);
         setMovies(newMovies);
       });
     }else
