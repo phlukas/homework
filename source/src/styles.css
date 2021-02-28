@@ -1,27 +1,67 @@
 body {
-  text-align: center;
+  text-align: left;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 0;
+  margin: 0;
 }
 .autocomplete-table {
   position: relative;
-  border-width: 0px 3px 3px 3px;
+  background-color: white;
+  align-items: left;
+  border-width: 1px;
   border-style: solid;
-  border-color: goldenrod;
-  background-color: whitesmoke;
-  width: 203px;
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.15);
+  width: 302px;
+  top: -10px;
+  right: -50px;
 }
-input.text {
-  width: 200px;
+input.text,
+input.text:active {
+  width: 300px;
+  height: 30px;
+  border: none;
+  background: rgb(255, 155, 48);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 155, 48, 1) 0%,
+    rgba(255, 64, 0, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 .option {
-  border: black solid 1px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
   justify-content: space-between;
-  width: 180px;
-  padding: 5px;
+  padding-bottom: 15px;
+}
+.option:hover {
+  background-color: rgb(235, 118, 71);
+}
+.searchBoxBackground {
+  background: rgb(255, 132, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 132, 0, 1) 0%,
+    rgba(224, 56, 56, 1) 69%,
+    rgba(255, 79, 2, 1) 100%
+  );
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+button {
+  padding-bottom: 6px;
+  background-color: white;
+  border: none;
+}
+p {
+  font-size: 0.6em;
+  margin: 0;
+  color: grey;
 }
